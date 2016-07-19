@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/lblNoHayEquipos"
+        style="@style/labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="No hay equipos creados, presione la tecla menú para añadir uno nuevo" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lstEquipos"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblNoHayEquipos"
+        android:layout_centerHorizontal="true" >
+
+    </ListView>
+</LinearLayout>

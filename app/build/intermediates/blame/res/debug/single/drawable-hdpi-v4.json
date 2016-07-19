@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_view_as_grid.png",
+        "source": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\src\\main\\res\\drawable-hdpi\\ic_action_view_as_grid.png"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_group.png",
+        "source": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\src\\main\\res\\drawable-hdpi\\ic_action_group.png"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_email.png",
+        "source": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\src\\main\\res\\drawable-hdpi\\ic_action_email.png"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_new.png",
+        "source": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\src\\main\\res\\drawable-hdpi\\ic_action_new.png"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_cancel.png",
+        "source": "C:\\Users\\ADMIN\\Desktop\\AndroidStudioProjects\\ZVOZPTT\\abril 27\\EZVoxPTT Android.1.5.0.9\\EZBox Android\\app\\src\\main\\res\\drawable-hdpi\\ic_action_cancel.png"
+    }
+]
