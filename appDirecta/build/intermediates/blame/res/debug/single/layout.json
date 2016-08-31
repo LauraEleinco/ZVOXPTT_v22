@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_seleccionar_grupo.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\dialog_seleccionar_grupo.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\act_admin_grupos.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\act_admin_grupos.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_contacto.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\listitem_contacto.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\act_inicializar.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\act_inicializar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\encabezado.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\encabezado.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\act_principal.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\act_principal.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\act_contactos.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\act_contactos.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\act_anadir_equipo.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\act_anadir_equipo.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\act_admin_equipos.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\act_admin_equipos.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_equipo.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\listitem_equipo.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\act_configurar_id.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\act_configurar_id.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_grupo.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\listitem_grupo.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\layout\\act_anadir_grupo.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\layout\\act_anadir_grupo.xml"
+    }
+]

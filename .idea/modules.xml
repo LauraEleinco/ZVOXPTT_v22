@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EZBox Android.iml" filepath="$PROJECT_DIR$/EZBox Android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZVOXPTT.iml" filepath="$PROJECT_DIR$/ZVOXPTT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appBase/appBase.iml" filepath="$PROJECT_DIR$/appBase/appBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appCommunityhelp/appCommunityhelp.iml" filepath="$PROJECT_DIR$/appCommunityhelp/appCommunityhelp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appDirecta/appDirecta.iml" filepath="$PROJECT_DIR$/appDirecta/appDirecta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appDiseno/appDiseno.iml" filepath="$PROJECT_DIR$/appDiseno/appDiseno.iml" />
     </modules>
   </component>
 </project>

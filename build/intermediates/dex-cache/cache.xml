@@ -1,3 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\ADMIN\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\Users\ADMIN\Desktop\GitHub\ZVOXPTT\appBase\build\intermediates\pre-dexed\debug\support-v4-18.0.0_a77c1d43f899c1df8f0ea365945b8774260254a6.jar" />
+    </item>
+    <item
+        jar="C:\Users\ADMIN\Desktop\GitHub\ZVOXPTT\appBase\libs\ksoap2-android-assembly-3.0.0-RC.2-jar-with-dependencies.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d68c31d26a1d69774f4a05c232dcf3173cbe2688">
+        <dex dex="C:\Users\ADMIN\Desktop\GitHub\ZVOXPTT\appBase\build\intermediates\pre-dexed\debug\ksoap2-android-assembly-3.0.0-RC.2-jar-with-dependencies_894d936c415f6b65da35deac879ca4eb64c3b79c.jar" />
+    </item>
+
+</items>
