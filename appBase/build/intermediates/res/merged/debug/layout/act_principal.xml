@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/pnlDisplay"
+        style="@style/display"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_margin="10dp" >
+
+        <TextView
+            android:id="@+id/lblInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:shadowColor="#000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="CONECTADO"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/btnAceptarCrearGrupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/boton_menu"
+            android:src="@drawable/ic_action_email" />
+
+        <ImageButton
+            android:id="@+id/btnContactos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/boton_menu"
+            android:src="@drawable/ic_action_group" />
+
+        <ImageButton
+            android:id="@+id/btnIngresoAdminGrupos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/boton_menu"
+            android:src="@drawable/ic_action_view_as_grid" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGrabar"
+        style="@style/btn_menu_ptt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="34dp"
+        android:text="PTT"
+        android:textSize="65sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

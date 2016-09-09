@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioRecord;
@@ -62,13 +63,13 @@ public class ActPrincipal extends Activity {
     Vibrator vibrador = null;
     private boolean hablando = false;
     //controles graficos
-    public Button btnPTT;
-    public TextView lblInfo;
-    private ImageButton btnContactos = null;
-    private ImageButton btnAdminGrupos = null;
-    private RelativeLayout btnSeleccionarGrupo = null;
+    // public Button btnPTT;
+    // public TextView lblInfo;
+    //private ImageButton btnContactos = null;
+    // private ImageButton btnAdminGrupos = null;
+    // private RelativeLayout btnSeleccionarGrupo = null;
     Handler myHandler = new Handler();
-    private Intent intentoAdminGrupos = null;
+    //private Intent intentoAdminGrupos = null;
     private Intent servicio = null;
     AudioManager manager;
 
@@ -79,10 +80,9 @@ public class ActPrincipal extends Activity {
     private static final String AUDIO_RECORDER_FOLDER = "AudioRecorder";
     private static final String AUDIO_RECORDER_TEMP_FILE = "record_temp.raw";
 
-    FileOutputStream os = null;
 
     int bufferSize;
-    int frequency = 9000; //8000;
+    int frequency = 44100; //8000;
     int channelConfiguration = AudioFormat.CHANNEL_IN_MONO;
     int audioEncoding = AudioFormat.ENCODING_PCM_16BIT;
     boolean started = false;
@@ -90,7 +90,7 @@ public class ActPrincipal extends Activity {
     boolean grabando;
     int foundPeakSubiendo;
     int foundPeakBajando;
-    short threshold = 15000;
+    short threshold = 2000;
 
     boolean debug = false;
 
@@ -106,40 +106,42 @@ public class ActPrincipal extends Activity {
         manager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
 
-
-
-        Button btnIniciar = (Button) findViewById(R.id.btnIniciar);
+        final Button btnIniciar = (Button) findViewById(R.id.btnIniciar);
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                btnIniciar.setTextColor(Color.CYAN);
                 startAquisition();
             }
         });
 
-        Button btnDetener = (Button) findViewById(R.id.btnDetener);
+        final Button btnDetener = (Button) findViewById(R.id.btnDetener);
+
         btnDetener.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btnDetener.setTextColor(Color.CYAN);
                 stopAquisition();
             }
         });
 
         //this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
         //inicialización de controles
-        btnPTT = (Button) findViewById(R.id.btnGrabar);
+        //   btnPTT = (Button) findViewById(R.id.btnGrabar);
 
         vibrador = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
 
         Wait.Show("Registrando...", ActPrincipal.this, onCancelWait);
-        btnContactos = (ImageButton) findViewById(R.id.btnContactos);
-        lblInfo = (TextView) findViewById(R.id.lblInfo);
-        btnAdminGrupos = (ImageButton) findViewById(R.id.btnIngresoAdminGrupos);
-        btnSeleccionarGrupo = (RelativeLayout) findViewById(R.id.pnlDisplay);
+        // btnContactos = (ImageButton) findViewById(R.id.btnContactos);
+        // lblInfo = (TextView) findViewById(R.id.lblInfo);
+        // btnAdminGrupos = (ImageButton) findViewById(R.id.btnIngresoAdminGrupos);
+        // btnSeleccionarGrupo = (RelativeLayout) findViewById(R.id.pnlDisplay);
 
         //inicialización de eventos
-        btnContactos.setOnClickListener(btnContactos_Click);
-        btnSeleccionarGrupo.setOnClickListener(btnSeleccionarGrupo_Click);
+        // btnContactos.setOnClickListener(btnContactos_Click);
+        //  btnSeleccionarGrupo.setOnClickListener(btnSeleccionarGrupo_Click);
         //inicializar los sonidos
         // if (sonidoSolicitandoPtt == null)
         //	sonidoSolicitandoPtt = MediaPlayer.create(ActPrincipal.this, R.raw.sonidopreguntaptt);
@@ -152,7 +154,7 @@ public class ActPrincipal extends Activity {
         //almacenar la instancia de esta actividad
         com.eleinco.ezvoxptt.business.Voz.actPrincipal = this;
 
-        btnAdminGrupos.setOnClickListener(btnAdminGrupos_Click);
+        //  btnAdminGrupos.setOnClickListener(btnAdminGrupos_Click);
 
         //servicio = (new Intent(this, Servicio.class));
         //startService(servicio);
@@ -161,7 +163,7 @@ public class ActPrincipal extends Activity {
         //iniciar el serviio androd
         IniciarServicio();
         //eventos del boton PTT
-        btnPTT.setOnTouchListener(new View.OnTouchListener() {
+   /*     btnPTT.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
@@ -176,14 +178,13 @@ public class ActPrincipal extends Activity {
                 }
                 return false;
             }
-        });
+        });*/
     }
-
 
 
     //inicia el servicio android
     private void IniciarServicio() {
-        btnPTT.setVisibility(View.INVISIBLE);
+        //btnPTT.setVisibility(View.INVISIBLE);
         servicio = new Intent(this, com.eleinco.ezvoxptt.core.Servicio.class);
         com.eleinco.ezvoxptt.core.Servicio.addServicioListener(listenerServicio);
         startService(servicio);
@@ -221,7 +222,7 @@ public class ActPrincipal extends Activity {
                 @Override
                 public void run() {
                     //Toast.makeText(ActPrincipal.this, "Conectado y registrado!", Toast.LENGTH_SHORT).show();
-                    btnPTT.setVisibility(View.VISIBLE);
+                    //   btnPTT.setVisibility(View.VISIBLE);
                     Wait.Close();
                     vibrador.vibrate(500);
                 }
@@ -233,7 +234,7 @@ public class ActPrincipal extends Activity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    btnPTT.setVisibility(View.INVISIBLE);
+                    // btnPTT.setVisibility(View.INVISIBLE);
                     Wait.Show("Registrando...", ActPrincipal.this, onCancelWait);
                 }
             });
@@ -264,7 +265,7 @@ public class ActPrincipal extends Activity {
         }
     };
     //evento del boton para administrar grupos
-    View.OnClickListener btnAdminGrupos_Click = new View.OnClickListener() {
+   /* View.OnClickListener btnAdminGrupos_Click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 
@@ -286,8 +287,8 @@ public class ActPrincipal extends Activity {
 
             startActivity(intentoAdminGrupos);
         }
-    };
-    View.OnClickListener btnSeleccionarGrupo_Click = new View.OnClickListener() {
+    };*/
+   /* View.OnClickListener btnSeleccionarGrupo_Click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             ArrayList<com.eleinco.ezvoxptt.entities.GrupoEquipo> todosLosGrupos =
@@ -323,8 +324,9 @@ public class ActPrincipal extends Activity {
             }
             MostrarGruposParaCambiar();
         }
-    };
+    };*/
 
+/*
     //muestra la lista de grupos disponibles para cambiarse
     private void MostrarGruposParaCambiar() {
         //crear un inflador que permitirá mostrar una parte de interfaz grafica en un dialogo
@@ -348,7 +350,7 @@ public class ActPrincipal extends Activity {
                         return;
                     }
                 }
-                CambiarGrupo(com.eleinco.ezvoxptt.business.Grupos.TodosMisGrupos.get(pos));
+              //  CambiarGrupo(com.eleinco.ezvoxptt.business.Grupos.TodosMisGrupos.get(pos));
             }
         });
         //mostrar el dialogo
@@ -382,8 +384,9 @@ public class ActPrincipal extends Activity {
             }
         });
     }
+*/
 
-    //carga la lista de grupos
+/*    //carga la lista de grupos
     private void CargarListaGruposCambiar(ListView lstGruposSeleccionar, ArrayList<com.eleinco.ezvoxptt.entities.GrupoEquipo> todosLosGrupos) {
         String[] nombresGrupos = new String[todosLosGrupos.size()];
         int p = 0;
@@ -404,7 +407,7 @@ public class ActPrincipal extends Activity {
                 MsgBox.Show(error, ActPrincipal.this);
             }
         });
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -412,7 +415,7 @@ public class ActPrincipal extends Activity {
         return true;
     }
 
-    @Override
+/*    @Override
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
         if (item.getItemId() == R.id.action_settings) {
             if (intentoAdminGrupos == null)
@@ -432,10 +435,10 @@ public class ActPrincipal extends Activity {
                     ActPrincipal.this);
         }
         return super.onMenuItemSelected(featureId, item);
-    }
+    }*/
 
     //realiza el pcocedimiento para cambiar de grupo en el servidor
-    private void CambiarGrupo(final com.eleinco.ezvoxptt.entities.GrupoEquipo nuevoGrupo) {
+   /* private void CambiarGrupo(final com.eleinco.ezvoxptt.entities.GrupoEquipo nuevoGrupo) {
         Wait.Show("Cambiando de grupo...", ActPrincipal.this);
         new Thread(new Runnable() {
             @Override
@@ -477,8 +480,8 @@ public class ActPrincipal extends Activity {
             }
         }).start();
     }
-
-    //cuando no se ha podido cambiar de grupo
+*/
+ /*   //cuando no se ha podido cambiar de grupo
     private void CambioGrupoFallido() {
         runOnUiThread(new Runnable() {
             @Override
@@ -487,15 +490,15 @@ public class ActPrincipal extends Activity {
                 MsgBox.Show("El cambio de grupo no ha sido respondido, por favor intente nuevamente", ActPrincipal.this);
             }
         });
-    }
+    }*/
 
-    View.OnClickListener btnContactos_Click = new View.OnClickListener() {
+/*    View.OnClickListener btnContactos_Click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intento = new Intent(ActPrincipal.this, ActContactos.class);
             startActivity(intento);
         }
-    };
+    };*/
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -550,7 +553,7 @@ public class ActPrincipal extends Activity {
     }
 
     //hace ptt
-    private void PTT() {
+    final public void PTT() {
         if (false)//para pruebas
         {
             com.eleinco.ezvoxptt.business.Voz.PttPermitido = 1;
@@ -563,13 +566,13 @@ public class ActPrincipal extends Activity {
 
         //reiniciar la variableq ue indica si puere hablar
         com.eleinco.ezvoxptt.business.Voz.PttPermitido = 0; //Defecto
-        lblInfo.setText("Solicitando...");
-        btnPTT.setText("...");
+        // lblInfo.setText("Solicitando...");
+        //btnPTT.setText("...");
         EsperarConfirmacionPTT();
         //enviar el query de PTT
         boolean enviado = TiempoRealDatos.SolicitarPTT(com.eleinco.ezvoxptt.business.App.GetID(), App.GrupoActual.ID_Grupo);
-        if (!enviado)
-            Toast.makeText(ActPrincipal.this, "Reconectando... por favor espere.", Toast.LENGTH_SHORT).show();
+        // if (!enviado)
+        //  Toast.makeText(ActPrincipal.this, "Reconectando... por favor espere.", Toast.LENGTH_SHORT).show();
         //com.eleinco.ezvoxptt.business.Server.Send(
         //		com.eleinco.ezvoxptt.business.Protocol.SolicitarPTT(
         //					com.eleinco.ezvoxptt.business.App.GetID()));
@@ -588,7 +591,7 @@ public class ActPrincipal extends Activity {
         }
         hablando = false;
         com.eleinco.ezvoxptt.business.Voz.Parar();
-        btnPTT.setText("PTT");
+        // btnPTT.setText("PTT");
         ActualizarGrupoActual();
         com.eleinco.ezvoxptt.business.Voz.PttPermitido = 0; //Defecto
     }
@@ -650,8 +653,8 @@ public class ActPrincipal extends Activity {
                     //sonidoPttOK.start();
                     vibrador.vibrate(30);
                     com.eleinco.ezvoxptt.business.Voz.Grabar();
-                    btnPTT.setText("STOP");
-                    lblInfo.setText("Hable ahora...");
+                    // btnPTT.setText("STOP");
+                    //  lblInfo.setText("Hable ahora...");
                     EnviarEquipoHablando();
                 } else {
                     hablando = false;
@@ -692,8 +695,10 @@ public class ActPrincipal extends Activity {
 
             if (idActualHablando == null)
                 ActualizarGrupoActual();
-            else
-                lblInfo.setText(">> " + objContacto.Alias + " <<"); //mostrar el alias del radio
+            else {
+
+            }
+            // lblInfo.setText(">> " + objContacto.Alias + " <<"); //mostrar el alias del radio
 
             //new Thread(new Runnable() {
             //	@Override
@@ -729,9 +734,9 @@ public class ActPrincipal extends Activity {
             @Override
             public void run() {
                 if (com.eleinco.ezvoxptt.business.App.GrupoActual == null) {
-                    lblInfo.setText("SIN GRUPO");
+                    //   lblInfo.setText("SIN GRUPO");
                 } else {
-                    lblInfo.setText(com.eleinco.ezvoxptt.business.App.GrupoActual.NombreGrupo);
+                    //  lblInfo.setText(com.eleinco.ezvoxptt.business.App.GrupoActual.NombreGrupo);
                 }
             }
         });
@@ -765,28 +770,23 @@ public class ActPrincipal extends Activity {
         }
 
         Context contexto;
+        FileOutputStream os = null;
 
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            Toast.makeText(contexto, "SE TERMINO LA GRABACIONrrrrr", Toast.LENGTH_SHORT).show();
+
+            //PTT();
+            Toast.makeText(contexto, "SE TERMINO LA GRABACION", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         protected Void doInBackground(Void... arg0) {
-            Log.w(TAG, "doInBackgroundmmmmmm");
+            Log.w(TAG, "doInBackground");
             try {
-                String filename = getTempFilename();
-
-                try {
-                    os = new FileOutputStream(filename);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
 
 
-                bufferSize = AudioRecord.getMinBufferSize(frequency,
-                        channelConfiguration, audioEncoding);
+                bufferSize = AudioRecord.getMinBufferSize(frequency, channelConfiguration, audioEncoding);
 
                 AudioRecord audioRecord = new AudioRecord(MediaRecorder.AudioSource.VOICE_RECOGNITION, frequency,
                         channelConfiguration, audioEncoding, bufferSize);
@@ -800,27 +800,19 @@ public class ActPrincipal extends Activity {
                     if (AudioRecord.ERROR_INVALID_OPERATION != bufferReadResult) {
                         //check signal
                         //put a threshold
-                        if (grabando = false)
-
+                        if (!grabando)
                             foundPeakSubiendo = searchThreshold(buffer, threshold);
-                        if (grabando)
-
+                        else
                             foundPeakBajando = searchThresholdInve(buffer, threshold);
 
                         if (foundPeakSubiendo > -1 && grabando == false) {
-                            //pTT()
-                            //grabando=true;
+                            PTT();
+                            grabando = true;
                             //found signal
                             //record signal
-                            byte[] byteBuffer = ShortToByte(buffer, bufferReadResult);
-                            try {
-                                os.write(byteBuffer);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                        if (foundPeakBajando > -1 && grabando == true) {
-                            // realese();
+                        } else if (foundPeakBajando == 0 && grabando == true) {
+                            Release();
+                            grabando = false;
                         } else {
                             //count the time
                             //don't save signal
@@ -889,15 +881,37 @@ public class ActPrincipal extends Activity {
 
         int searchThresholdInve(short[] arr, short thr) {
             int peakIndex;
+            int peakNume = 0;
+            short numeronega;
+            int numeros=0;
+            double promedio, suma = 0;
             int arrLen = arr.length;
+
+
             for (peakIndex = 0; peakIndex < arrLen; peakIndex++) {
-                if ((arr[peakIndex] <= thr) || (arr[peakIndex] >= -thr)) {
+
+                    for (arr[peakIndex]=arr[peakIndex]; arr[peakIndex] < arrLen; peakIndex++) {
+
+                        if (arr[peakIndex] < 0) {
+                            numeronega=arr[peakIndex];
+                            arr[peakNume] = (short) (numeronega * -1);
+                        }else {
+                            arr[arr[peakIndex]]=arr[peakNume];
+                        }
+                        int  Numeros =arr[peakNume];
+                        suma = suma + Numeros;
+
+                    }
+                promedio = suma / arrLen;
+
+                if ((arr[peakIndex] >= thr) || (arr[peakIndex] <= -thr)) {
                     //se supera la soglia, esci e ritorna peakindex-mezzo kernel.
 
-                    return peakIndex;
+                    return arr[peakIndex];
+
                 }
             }
-            return -1; //not found
+            return 0; //ESTAMOS DENTRO DEL UMBRAL
 
         }
 

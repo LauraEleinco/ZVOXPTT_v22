@@ -3,7 +3,24 @@
     android:layout_height="fill_parent"
     android:background="#fff"
     android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btnIniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar"
+        android:layout_toRightOf="@+id/lblTexto"/>
 
+    <Button
+        android:id="@+id/btnDetener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DETENER"
+        android:layout_toRightOf="@id/btnIniciar"/>
+    </LinearLayout>
     <RelativeLayout
         android:id="@+id/pnlDisplay"
         style="@style/display"

@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\build\\intermediates\\res\\merged\\debug\\menu\\act_inicializar.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\src\\main\\res\\menu\\act_inicializar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\build\\intermediates\\res\\merged\\debug\\menu\\act_anadir_grupo.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\src\\main\\res\\menu\\act_anadir_grupo.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\build\\intermediates\\res\\merged\\debug\\menu\\act_anadir_equipo.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\src\\main\\res\\menu\\act_anadir_equipo.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\build\\intermediates\\res\\merged\\debug\\menu\\act_admin_equipos.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\src\\main\\res\\menu\\act_admin_equipos.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\build\\intermediates\\res\\merged\\debug\\menu\\act_configurar_id.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\src\\main\\res\\menu\\act_configurar_id.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\build\\intermediates\\res\\merged\\debug\\menu\\act_admin_grupos.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\src\\main\\res\\menu\\act_admin_grupos.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\build\\intermediates\\res\\merged\\debug\\menu\\act_principal.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDiseno\\src\\main\\res\\menu\\act_principal.xml"
+    }
+]

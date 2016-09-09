@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Añadir nuevo grupo"/>
+    <item
+        android:id="@+id/action_configuraciones"
+        android:orderInCategory="100"
+        android:title="Configuraciones"/>
+
+</menu>
