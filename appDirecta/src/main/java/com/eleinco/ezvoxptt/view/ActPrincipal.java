@@ -88,9 +88,8 @@ public class ActPrincipal extends Activity {
     boolean started = false;
     RecordAudio recordTask;
     boolean grabando;
-    int foundPeakSubiendo;
-    int foundPeakBajando;
-    short threshold = 2000;
+    int foundPeak;
+    short threshold = 7000;
 
     boolean debug = false;
 
@@ -798,31 +797,24 @@ public class ActPrincipal extends Activity {
                 while (started) {
                     int bufferReadResult = audioRecord.read(buffer, 0, bufferSize);
                     if (AudioRecord.ERROR_INVALID_OPERATION != bufferReadResult) {
-                        //check signal
-                        //put a threshold
-                        if (!grabando)
-                            foundPeakSubiendo = searchThreshold(buffer, threshold);
-                        else
-                            foundPeakBajando = searchThresholdInve(buffer, threshold);
 
-                        if (foundPeakSubiendo > -1 && grabando == false) {
+                            //variable que detecta si hay sonido o no
+                        foundPeak = searchThreshold(buffer, threshold);
+
+                        //verifica si hay sonido entonces manda pttpresionado true
+                        if (foundPeak > -1) PttPresionado = true;
+                            // si no hay sonido entonces pttpresionado es falso
+                        else PttPresionado = false;
+                            //si hay sonido y no esta grabando entonces GRABE.
+                        if (PttPresionado && grabando == false) {
                             PTT();
                             grabando = true;
-                            //found signal
-                            //record signal
-                        } else if (foundPeakBajando == 0 && grabando == true) {
+
+                            //si no hay sonido y esta grabando entonces PARE
+                        } else if (!PttPresionado && grabando == true) {
                             Release();
                             grabando = false;
-                        } else {
-                            //count the time
-                            //don't save signal
                         }
-
-
-                        //show results
-                        //here, with publichProgress function, if you calculate the total saved samples,
-                        //you can optionally show the recorded file length in seconds:      publishProgress(elsapsedTime,0);
-
 
                     }
                 }
@@ -864,7 +856,6 @@ public class ActPrincipal extends Activity {
             return buffer;
         }
 
-
         int searchThreshold(short[] arr, short thr) {
             int peakIndex;
             int arrLen = arr.length;
@@ -872,46 +863,11 @@ public class ActPrincipal extends Activity {
                 if ((arr[peakIndex] >= thr) || (arr[peakIndex] <= -thr)) {
                     //se supera la soglia, esci e ritorna peakindex-mezzo kernel.
 
+
                     return peakIndex;
                 }
             }
             return -1; //not found
-
-        }
-
-        int searchThresholdInve(short[] arr, short thr) {
-            int peakIndex;
-            int peakNume = 0;
-            short numeronega;
-            int numeros=0;
-            double promedio, suma = 0;
-            int arrLen = arr.length;
-
-
-            for (peakIndex = 0; peakIndex < arrLen; peakIndex++) {
-
-                    for (arr[peakIndex]=arr[peakIndex]; arr[peakIndex] < arrLen; peakIndex++) {
-
-                        if (arr[peakIndex] < 0) {
-                            numeronega=arr[peakIndex];
-                            arr[peakNume] = (short) (numeronega * -1);
-                        }else {
-                            arr[arr[peakIndex]]=arr[peakNume];
-                        }
-                        int  Numeros =arr[peakNume];
-                        suma = suma + Numeros;
-
-                    }
-                promedio = suma / arrLen;
-
-                if ((arr[peakIndex] >= thr) || (arr[peakIndex] <= -thr)) {
-                    //se supera la soglia, esci e ritorna peakindex-mezzo kernel.
-
-                    return arr[peakIndex];
-
-                }
-            }
-            return 0; //ESTAMOS DENTRO DEL UMBRAL
 
         }
 
