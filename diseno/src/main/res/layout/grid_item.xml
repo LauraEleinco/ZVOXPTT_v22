@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:layout_marginBottom="16dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imagen_coche"
+            android:layout_width="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_height="100dp"
+            android:transitionName="@string/nombre_transicion_imagen"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/linearLayout"
+            android:layout_weight="0.78" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:layout_above="@+id/nombre_coche"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+
+                    android:gravity="right"
+                    android:background="@color/background_footer"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/identificador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/valor_identificador"
+                        android:layout_alignBottom="@+id/valor_identificador"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Identificador"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/valor_identificador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/nombre_coche"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="148dp"
+                        android:layout_marginRight="148dp"
+                        android:text="07DIV4"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nombre_coche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="bottom|center"
+            android:background="@color/textColorPrimary"
+            android:maxLines="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@android:color/black"
+            android:layout_weight="0.31" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

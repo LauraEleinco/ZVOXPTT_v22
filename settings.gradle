@@ -1,1 +1,1 @@
-include ':appBase', ':appDiseno', ':appCommunityhelp', ':appDirecta'
+include ':appBase', ':appDirecta', ':diseno'

@@ -89,7 +89,7 @@ public class ActPrincipal extends Activity {
     RecordAudio recordTask;
     boolean grabando;
     int foundPeak;
-    short threshold = 7000;
+    short threshold = 5000;
 
     boolean debug = false;
 

@@ -4,9 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ZVOXPTT.iml" filepath="$PROJECT_DIR$/ZVOXPTT.iml" />
       <module fileurl="file://$PROJECT_DIR$/appBase/appBase.iml" filepath="$PROJECT_DIR$/appBase/appBase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/appCommunityhelp/appCommunityhelp.iml" filepath="$PROJECT_DIR$/appCommunityhelp/appCommunityhelp.iml" />
       <module fileurl="file://$PROJECT_DIR$/appDirecta/appDirecta.iml" filepath="$PROJECT_DIR$/appDirecta/appDirecta.iml" />
-      <module fileurl="file://$PROJECT_DIR$/appDiseno/appDiseno.iml" filepath="$PROJECT_DIR$/appDiseno/appDiseno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/diseno/diseno.iml" filepath="$PROJECT_DIR$/diseno/diseno.iml" />
     </modules>
   </component>
 </project>

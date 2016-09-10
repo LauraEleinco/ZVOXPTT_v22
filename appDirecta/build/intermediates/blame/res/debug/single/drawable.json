@@ -8,12 +8,12 @@
         "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\drawable\\connected.png"
     },
     {
-        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\drawable\\boton_primario.xml",
-        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\drawable\\boton_primario.xml"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\drawable\\admin.png",
         "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\drawable\\admin.png"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\drawable\\boton_primario.xml",
+        "source": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\src\\main\\res\\drawable\\boton_primario.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\Desktop\\GitHub\\ZVOXPTT\\appDirecta\\build\\intermediates\\res\\merged\\debug\\drawable\\msg.png",

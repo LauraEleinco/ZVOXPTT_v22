@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorToolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/conf" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.admid.beta1.ScrollingActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="0.31"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="38dp">
+
+
+            <!-- Name Label -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_movil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text="Movil:"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="left"
+                    android:layout_alignTop="@+id/movil"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="9dp" />
+
+                <TextView
+                    android:id="@+id/movil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7777"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="14dp"
+                    android:layout_gravity="left"
+                    android:gravity="left|center"
+                    android:layout_toRightOf="@+id/tv_movil"
+                    android:layout_toEndOf="@+id/tv_movil" />
+
+                <TextView
+                    android:id="@+id/tv_ultimazona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Ultima zona reportada:"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="right"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/UltimaZona"
+                    android:layout_toStartOf="@+id/UltimaZona"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:id="@+id/UltimaZona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="29"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="14dp"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:layout_marginRight="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:src="@drawable/division" />
+
+            <TextView
+                android:id="@+id/tv_servicios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="Servicios"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:alpha="0.5"
+                    android:src="@drawable/ofertados" />
+
+                <TextView
+                    android:id="@+id/tv_recibirOfertados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/imageView1"
+                    android:layout_toRightOf="@+id/imageView1"
+                    android:text="Recibir Ofertados"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:id="@+id/sw_recibirOfertados"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.5"
+                android:src="@drawable/division" />
+
+            <TextView
+                android:id="@+id/tv_Aplicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="Aplicacion"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/im_sonido"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:alpha="0.5"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/sonido" />
+
+                <TextView
+                    android:id="@+id/tv_CambiarTono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/im_sonido"
+                    android:layout_toRightOf="@+id/im_sonido"
+                    android:text="Cambiar Tono "
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_examinar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:onClick="examinar"
+                    android:padding="12dp"
+                    android:text="Examinar"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <ImageView
+                    android:id="@+id/home"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:alpha="0.5"
+                    android:src="@drawable/home"
+                    android:layout_alignBottom="@+id/sw_iniciarApp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/tv_IniciarApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginStart="29dp"
+                    android:text="Iniciar aplicación"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_above="@+id/textView19"
+                    android:layout_toRightOf="@+id/home"
+                    android:layout_toEndOf="@+id/home"
+                    android:gravity="center" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/sw_iniciarApp" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="al encender el celular "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignLeft="@+id/tv_IniciarApp"
+                    android:layout_alignStart="@+id/tv_IniciarApp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:src="@drawable/division" />
+
+            <TextView
+                android:id="@+id/Ubicacionpo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="Obtener ubicación por medio de:"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/gps"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:alpha="0.5"
+                    android:src="@drawable/gps" />
+
+                <TextView
+                    android:id="@+id/textViewapp0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/gps"
+                    android:layout_toRightOf="@+id/gps"
+                    android:text="Gps"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:id="@+id/sw_gps"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignTop="@+id/gps"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/asistido"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:alpha="0.5"
+                    android:src="@drawable/asistido" />
+
+                <TextView
+                    android:id="@+id/textViewapp7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/asistido"
+                    android:layout_toRightOf="@+id/asistido"
+                    android:text="Asistido"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:id="@+id/sw_asistido"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <!-- Email Label -->
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
