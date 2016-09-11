@@ -798,14 +798,23 @@ public class ActPrincipal extends Activity {
                     int bufferReadResult = audioRecord.read(buffer, 0, bufferSize);
                     if (AudioRecord.ERROR_INVALID_OPERATION != bufferReadResult) {
 
-                            //variable que detecta si hay sonido o no
+                        //variable que detecta si hay sonido o no
                         foundPeak = searchThreshold(buffer, threshold);
+                     /*
 
+
+
+
+                     codigo del cdt
+
+
+
+                */
                         //verifica si hay sonido entonces manda pttpresionado true
                         if (foundPeak > -1) PttPresionado = true;
                             // si no hay sonido entonces pttpresionado es falso
                         else PttPresionado = false;
-                            //si hay sonido y no esta grabando entonces GRABE.
+                        //si hay sonido y no esta grabando entonces GRABE.
                         if (PttPresionado && grabando == false) {
                             PTT();
                             grabando = true;
